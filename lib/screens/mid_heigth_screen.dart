@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MidScreen extends StatelessWidget {
-  const MidScreen({
+class MidHeigthScreen extends StatelessWidget {
+  final bool isLowWidth;
+  const MidHeigthScreen({
     Key? key,
+    required this.isLowWidth,
   }) : super(key: key);
 
   @override
@@ -28,13 +30,17 @@ class MidScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: isLowWidth
+                  ? CrossAxisAlignment.center
+                  : CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 60, left: 170),
+                  padding: isLowWidth
+                      ? EdgeInsets.only(top: 20)
+                      : EdgeInsets.only(top: 20, left: 200),
                   child: Container(
-                    height: 112,
-                    width: 149,
+                    height: 50,
+                    width: 50,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -46,23 +52,24 @@ class MidScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 60, left: 90),
+                  padding: isLowWidth
+                      ? EdgeInsets.only(top: 20)
+                      : EdgeInsets.only(top: 20, left: 90),
                   child: Container(
-                    height: 330,
-                    width: 320,
+                    width: 270,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(25),
+                      padding: const EdgeInsets.all(10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Login Administrador',
                             style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: Color.fromARGB(255, 92, 80, 77)),
                           ),
@@ -71,13 +78,13 @@ class MidScreen extends StatelessWidget {
                             child: Text(
                               'Usuário',
                               style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 92, 80, 77)),
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 30,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -89,7 +96,7 @@ class MidScreen extends StatelessWidget {
                                 decoration: InputDecoration(
                                   hintText: '444.333.222.111',
                                   hintStyle: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                   border: InputBorder.none,
@@ -102,13 +109,13 @@ class MidScreen extends StatelessWidget {
                             child: Text(
                               'Senha',
                               style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 92, 80, 77)),
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 30,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -121,7 +128,7 @@ class MidScreen extends StatelessWidget {
                                 decoration: InputDecoration(
                                   hintText: '*************',
                                   hintStyle: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                   border: InputBorder.none,
@@ -135,7 +142,7 @@ class MidScreen extends StatelessWidget {
                               child: Text(
                                 'Esqueci minha senha',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Color.fromARGB(255, 23, 162, 85),
                                 ),
@@ -143,7 +150,7 @@ class MidScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 30,
                             width: double.maxFinite,
                             child: ElevatedButton(
                               style: ButtonStyle(
@@ -160,7 +167,7 @@ class MidScreen extends StatelessWidget {
                               child: Text(
                                 'ENTRAR',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white,
                                 ),

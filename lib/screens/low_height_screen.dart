@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ExtraHighScreen extends StatelessWidget {
-  const ExtraHighScreen({
-    Key? key,
-  }) : super(key: key);
+class LowHeigthScreen extends StatelessWidget {
+  final bool isLowWidth;
+  const LowHeigthScreen({Key? key, required this.isLowWidth})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,13 +28,17 @@ class ExtraHighScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: isLowWidth
+                  ? CrossAxisAlignment.center
+                  : CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 60, left: 170),
+                  padding: isLowWidth
+                      ? EdgeInsets.only(top: 20)
+                      : EdgeInsets.only(top: 20, left: 230),
                   child: Container(
-                    height: 112,
-                    width: 149,
+                    height: 35,
+                    width: 50,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -46,41 +50,43 @@ class ExtraHighScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 60, left: 90),
+                  padding: isLowWidth
+                      ? EdgeInsets.only(top: 20)
+                      : EdgeInsets.only(top: 20, left: 90),
                   child: Container(
-                    height: 330,
+                    height: 200,
                     width: 320,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(25),
+                      padding: const EdgeInsets.all(10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Login Administrador',
                             style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w600,
                                 color: Color.fromARGB(255, 92, 80, 77)),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 20, bottom: 10),
+                            padding: const EdgeInsets.only(top: 10, bottom: 10),
                             child: Text(
                               'Usuário',
                               style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 92, 80, 77)),
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 20,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(12),
                               color: Color.fromARGB(255, 247, 245, 244),
                             ),
                             child: Padding(
@@ -89,7 +95,7 @@ class ExtraHighScreen extends StatelessWidget {
                                 decoration: InputDecoration(
                                   hintText: '444.333.222.111',
                                   hintStyle: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                   border: InputBorder.none,
@@ -98,20 +104,20 @@ class ExtraHighScreen extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 20, bottom: 10),
+                            padding: const EdgeInsets.only(top: 12, bottom: 12),
                             child: Text(
                               'Senha',
                               style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w600,
                                   color: Color.fromARGB(255, 92, 80, 77)),
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 20,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(12),
                               color: Color.fromARGB(255, 247, 245, 244),
                             ),
                             child: Padding(
@@ -121,7 +127,7 @@ class ExtraHighScreen extends StatelessWidget {
                                 decoration: InputDecoration(
                                   hintText: '*************',
                                   hintStyle: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                   border: InputBorder.none,
@@ -130,12 +136,12 @@ class ExtraHighScreen extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 20, bottom: 10),
+                            padding: const EdgeInsets.only(top: 10, bottom: 5),
                             child: Center(
                               child: Text(
                                 'Esqueci minha senha',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Color.fromARGB(255, 23, 162, 85),
                                 ),
@@ -143,7 +149,7 @@ class ExtraHighScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 40,
+                            height: 20,
                             width: double.maxFinite,
                             child: ElevatedButton(
                               style: ButtonStyle(
@@ -152,7 +158,7 @@ class ExtraHighScreen extends StatelessWidget {
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
                                 ),
                               ),
@@ -160,7 +166,7 @@ class ExtraHighScreen extends StatelessWidget {
                               child: Text(
                                 'ENTRAR',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white,
                                 ),

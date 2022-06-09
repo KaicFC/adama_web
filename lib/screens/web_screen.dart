@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HighScreen extends StatelessWidget {
-  const HighScreen({
+class WebScreen extends StatelessWidget {
+  const WebScreen({
     Key? key,
   }) : super(key: key);
 
