@@ -48,7 +48,6 @@ class WebScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: 60, left: 90),
                   child: Container(
-                    height: 330,
                     width: 320,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),

@@ -51,10 +51,9 @@ class LowHeigthScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: isLowWidth
-                      ? EdgeInsets.only(top: 20)
-                      : EdgeInsets.only(top: 20, left: 90),
+                      ? EdgeInsets.only(top: 20, left: 10, right: 10)
+                      : EdgeInsets.only(top: 20, left: 90, ),
                   child: Container(
-                    height: 200,
                     width: 320,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),

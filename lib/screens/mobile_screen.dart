@@ -46,9 +46,8 @@ class MobileScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 60),
+                  padding: EdgeInsets.only(top: 60, left: 10, right: 10),
                   child: Container(
-                    height: 330,
                     width: 320,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),

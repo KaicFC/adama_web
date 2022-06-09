@@ -29,6 +29,8 @@ class LayoutResponsive extends StatelessWidget {
           return HighHeightScreen(isLowWidth: isLowWidth);
         } else if (widthScreen < 650) {
           return MobileScreen();
+        } else if (heightScreen > widthScreen) {
+          return MobileScreen();
         } else {
           return WebScreen();
         }
