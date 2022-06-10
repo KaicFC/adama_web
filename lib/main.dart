@@ -28,8 +28,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    var heightScreen = MediaQuery.of(context).size.height;
-    var widthScreen = MediaQuery.of(context).size.width;
-    return LayoutResponsive(heightScreen: heightScreen, widthScreen: widthScreen);
+    return LayoutResponsive();
   }
 }
